@@ -9,6 +9,7 @@ class Item extends StatelessWidget {
   final bool useEmoji;
   final TextStyle textStyle;
   final bool withCountryNames;
+  final double width;
 
   const Item({
     Key key,
@@ -16,12 +17,14 @@ class Item extends StatelessWidget {
     this.showFlag,
     this.useEmoji,
     this.textStyle,
+    this.width,
     this.withCountryNames = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: this.width,
       child: Row(
         textDirection: TextDirection.ltr,
         mainAxisAlignment: MainAxisAlignment.start,
